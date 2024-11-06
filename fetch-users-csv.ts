@@ -23,7 +23,7 @@ async function fetchUsersFromCSV(filePath: string): Promise<User[]> {
                     last_name: row.last_name,
                     email: row.email,
                     gender: row.gender,
-                    subscription: JSON.parse(row.subscription),
+                    subscription: row.subscription,
                     date_time: row.date_time,
                 };
                 users.push(user);
