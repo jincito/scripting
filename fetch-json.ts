@@ -19,9 +19,9 @@ async function fetchJSON(): Promise<void> {
     try {
         const response: Response = await fetch(url);
         if (!response.ok) {
-            throw new Error("Response status: ${response.status}");
+            throw new Error(`Response status: ${response.status}`);
         }
-        const json: User[] = await response.json() as User[];
+        const json: User[] = (await response.json()) as User[];
         console.log(json);
     } catch (error) {
         console.error("Error: ", error);

@@ -10,3 +10,6 @@ coverage/
 .idea/
 .vscode/
 *.swp
+
+# testing file
+test.ts
